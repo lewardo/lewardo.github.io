@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-      window.location.replace('/?/' + window.location.pathname.split('/').slice(1).join('/'));
+      window.location.replace(`/?${window.location.pathname}`);
     </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/">
+    </noscript>
   </head>
   <body></body>
 </html>
