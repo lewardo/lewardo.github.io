@@ -23,7 +23,7 @@
             return response.text();
         }).then(html => {
             document.getElementById('content').innerHTML = html;
-            window.history.replaceState({ path: href }, '', href);
+            if (href !== 'default') window.history.replaceState({ path: href }, '', href);
         })
     </script>
 
