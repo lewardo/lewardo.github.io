@@ -1,28 +1,25 @@
+function loadContent(path, push = false) {
+    fetch(`./html/${path}.html`).then(response => {
+        document.getElementById('content').innerHTML = response.text();
+        if (push) history.pushState({ path }, '', path);
+    })
+}
 
-// define method
 function interceptNavigation() {
-    // intercept the back button
-    $(window).on('popstate', function(event) {
-        const state = event.originalEvent.state;
-        if (state) {
-            $('#content').load(`./html/${state.path}.html`);
-        } else {
-            $('#content').load("./html/parkour.html", () => {})
-        }
+    window.addEventListener('popstate', event => {
+        if (event.state) loadContent(event.state.path);
+        else loadContent('default');
     });
 
-    $('a').click(function(event) {
-        event.preventDefault();
-
-        const href = $(this).attr('href')
-        $('#content').load(`./html/${href}.html`, function(response, status, xhr) {
-            if (status == "success") {
-                history.pushState({ path: href }, '', href);
-            }
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const href = this.getAttribute('href');
+            loadContent(href, true);
         });
     });
 }
 
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', () => {
     interceptNavigation();
 });

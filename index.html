@@ -18,14 +18,15 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <script type="text/javascript">
-        if (window.location.search[1] === '/' ) {
+        if (window.location.search[1] === '/') {
             href = window.location.search.slice(1)
-            window.history.replaceState({ path: href }, '', href);
+
+            fetch(`./html/${href}.html`).then(response => {
+                document.getElementById('content').innerHTML = response.text();
+                window.history.replaceState({ path: href }, '', href);
+            })
         }
     </script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/jqueryrouter@latest/dist/js/jquery.router.min.js"></script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.min.js"></script>
 
