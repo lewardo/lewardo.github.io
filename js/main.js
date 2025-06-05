@@ -1,6 +1,6 @@
 function loadContent(path, push = false) {
-    fetch(`./html/${path}.html`).then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
+    fetch(`html/${path}.html`).then(response => {
+        if (!response.ok) throw new Error('Network error');
         return response.text();
     }).then(html => {
         document.getElementById('content').innerHTML = html;
