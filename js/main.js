@@ -1,6 +1,9 @@
 function loadContent(path, push = false) {
     fetch(`./html/${path}.html`).then(response => {
-        document.getElementById('content').innerHTML = response.text();
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+    }).then(html => {
+        document.getElementById('content').innerHTML = html;
         if (push) history.pushState({ path }, '', path);
     })
 }

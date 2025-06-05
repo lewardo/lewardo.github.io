@@ -22,7 +22,10 @@
             href = window.location.search.slice(1)
 
             fetch(`./html/${href}.html`).then(response => {
-                document.getElementById('content').innerHTML = response.text();
+                if (!response.ok) throw new Error('Network error');
+                return response.text();
+            }).then(html => {
+                document.getElementById('content').innerHTML = html;
                 window.history.replaceState({ path: href }, '', href);
             })
         }
