@@ -14,7 +14,7 @@ function interceptNavigation() {
         else loadContent('default');
     });
 
-    document.querySelectorAll('a').forEach(link => {
+    document.querySelectorAll('a.menu__link').forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
             const href = this.getAttribute('href');
