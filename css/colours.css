@@ -1,0 +1,51 @@
+:root {
+    --colour-black: #2e3440;
+    --colour-dark-grey: #3b4252;
+    --colour-grey: #434c5e;
+    --colour-light-grey: #d8dee9;
+
+    --colour-white: #eceff4;
+    --colour-dirty-white: #e5e9f0;
+    --colour-dark-white: #d8dee9;
+
+    --colour-teal: #8fbcbb;
+    --colour-light-teal: #88c0d0;
+    --colour-blue: #5e81ac;
+    --colour-light-blue: #81a1c1;
+
+    --colour-red: #bf616a;
+    --colour-orange: #d08770;
+    --colour-yellow: #ebcb8b;
+    --colour-green: #a3be8c;
+    --colour-purple: #b48ead;
+}
+
+body {
+    --text-colour: var(--colour-black);
+    --subtext-colour: var(--colour-dark-grey);
+    --subtext-colour-light: var(--colour-grey);
+
+    --primary-colour: var(--colour-blue);
+    --secondary-colour: var(--colour-green);
+
+    --background-colour: var(--colour-dirty-white);
+    --background-colour-dark: var(--colour-light-grey);
+    --button-colour: var(--colour-grey);
+    --bar-colour: var(--colour-dark-grey);
+}
+
+body.dark-mode  {
+    --text-colour: var(--colour-white);
+    --subtext-colour: var(--colour-dark-white);
+    --subtext-colour-light: var(--colour-dirty-white);
+
+    --background-colour: var(--colour-grey);
+    --background-colour-dark: var(--colour-dark-grey);
+    --button-colour: var(--colour-dark-grey);
+    --bar-colour: var(--colour-blue);
+}
+
+body {
+    color: var(--text-colour);
+    background-color: var(--background-colour);
+}
