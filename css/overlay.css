@@ -219,7 +219,6 @@
 
 .overlay__enter:hover {
     background: var(--primary-colour);
-    color: var(--background-colour);
 }
 
 .overlay__colour_mode {

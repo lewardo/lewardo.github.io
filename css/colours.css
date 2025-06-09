@@ -25,7 +25,7 @@ body {
     --subtext-colour: var(--colour-dark-grey);
     --subtext-colour-light: var(--colour-grey);
 
-    --primary-colour: var(--colour-blue);
+    --primary-colour: var(--colour-light-teal);
     --secondary-colour: var(--colour-green);
 
     --background-colour: var(--colour-dirty-white);
@@ -38,6 +38,10 @@ body.dark-mode  {
     --text-colour: var(--colour-white);
     --subtext-colour: var(--colour-dark-white);
     --subtext-colour-light: var(--colour-dirty-white);
+
+
+    --primary-colour: var(--colour-blue);
+    --secondary-colour: var(--colour-green);
 
     --background-colour: var(--colour-grey);
     --background-colour-dark: var(--colour-dark-grey);
