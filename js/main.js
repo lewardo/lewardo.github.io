@@ -54,4 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     interceptNavigation();
     manageOverlay();
     manageColourMode();
+
+    document.body.addEventListener('click', event => {
+        document.getElementById('menu').classList.toggle('menu--open');
+    });
 });

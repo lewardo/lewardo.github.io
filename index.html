@@ -38,6 +38,10 @@
     <!-- <script defer src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.min.js"></script> -->
 </head>
 <body>
+    <section class="content">
+        <main id="content"></main>
+    </section>
+
     <section id="overlay" class="overlay">
         <div class="overlay__container">
             <div class="overlay__bars">
@@ -83,46 +87,53 @@
     </section>
 
     <section id="menu" class="menu">
-        <div class="menu__tag_container">
-            <div class="menu__tag">
-                &exist;!&epsilon;.i
-            </div>
+        <div class="menu__tag">
+            <a href="https://en.wikipedia.org/wiki/Uniqueness_quantification" class="menu__tag_container">
+                &exist;!&epsilon;.&iota;
+            </a>
         </div>
         <div id="naviagtion" class="menu__navigation">
-            <div class="menu__link_container">
-                <a href="parkour" class="menu__link">parkour</a>
-            </div>
-            <div class="menu__link_container">            
-                <a href="philosophy" class="menu__link">philo</a>
-            </div>
-            <div class="menu__link_container">            
-                <a href="photography" class="menu__link">photo</a>
-            </div>
-            <div class="menu__link_container">            
-                <a href="projects" class="menu__link">projects</a>
-            </div>
-            <div class="menu__link_container">            
-                <a href="work" class="menu__link">work</a>
+            <div class="menu__navigation_container">
+                <div class="menu__link" style="--link-number: '01'">
+                    <a href="parkour">parkour</a>
+                </div>
+                <div class="menu__link" style="--link-number: '02'">            
+                    <a href="philosophy">philo</a>
+                </div>
+                <div class="menu__link" style="--link-number: '03'">            
+                    <a href="photography">photo</a>
+                </div>
+                <div class="menu__link" style="--link-number: '04'">            
+                    <a href="projects">projects</a>
+                </div>
+                <div class="menu__link" style="--link-number: '05'">            
+                    <a href="work">work</a>
+                </div>
             </div>
         </div>
         <div class="menu__socials">
-            <span class="menu__socials_link">
-                <a href="https://github.com/lewardo">github</a>
-            </span>
-            <span class="menu__socials_link"></span>
-            <span class="menu__socials_link"></span>
-            <span class="menu__socials_link"></span>
+            <div class="menu__socials_container">
+                <div class="menu__socials_link">
+                    <a href="https://github.com/lewardo">github</a>
+                </div>
+                <div class="menu__socials_link">
+                    <a href="mailto:ed.t.levasseur@gmail.com&subject=Portfolio%20Inquiry">email</a>
+                </div>
+                <div class="menu__socials_link">
+                    <a href="https://instagram.com/ed.lewardo">instagram</a>
+                </div>
+            </div>
         </div>
         <div class="menu__resume">
             <span class="menu__resume_link">
                 <a href="assets/CV_Edouard_Levasseur.pdf" target="_blank">résumé</a>
             </span>
         </div>
-    </section>
-
-
-    <section class="content">
-        <main id="content"></main>
+        <div class="menu__hero">
+            <div class="menu__hero_container">
+                <!-- <img src="assets/favicon.png" alt="wow"> -->
+            </div>
+        </div>
     </section>
 </body>
 </html>
