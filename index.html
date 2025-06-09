@@ -12,7 +12,10 @@
     
     <title>Portfolio &mdash; Edouard Levasseur</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/overlay.css">
+
+    <link href="https://fonts.cdnfonts.com/css/dejavu-sans-mono" rel="stylesheet">    
     
     <script type="text/javascript">
         if (window.location.search[1] === '/') href = window.location.search.slice(1);
@@ -34,36 +37,38 @@
     <section id="overlay" class="overlay">
         <div class="overlay__container">
             <div class="overlay__bars">
-                <div class="overlay__bar overlay__bar--1"></div>
-                <div class="overlay__bar overlay__bar--2"></div>
-                <div class="overlay__bar overlay__bar--3"></div>
-                <div class="overlay__bar overlay__bar--4"></div>
+                <div class="overlay__bar"></div>
+                <div class="overlay__bar"></div>
+                <div class="overlay__bar"></div>
+                <div class="overlay__bar"></div>
             </div>
-            <div class="overlay__logo">
+            <div class="overlay__intro">
+                <div class="overlay__info">
+                    <span class="overlay__info_title">
+                        philosophy
+                    </span>
+                    <p class="overlay__info_content">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perspiciatis nisi, provident omnis quasi vero eveniet ipsa minus molestiae, repellendus temporibus nostrum pariatur libero neque ad minima rerum quaerat amet.
+                    </p>
+                </div>
+                <div class="overlay__info">
+                    <span class="overlay__info_title">
+                        about
+                    </span>
+                    <p class="overlay__info_content">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illum aliquam eos velit nobis a quia eius, aut rem, eligendi veniam! Laborum dignissimos maiores et, officia distinctio quam perferendis culpa.
+                    </p>
+                </div>
+            </div>
+            <div id="overlay_logo" class="overlay__logo">
                 &exist;!
             </div>
             <div class="overlay__header">
                 <span class="overlay__title">Edouard Levasseur</span>
-                <span class="overlay__subtitle_name">a.k.a. lewardo</span>
+                <span class="overlay__subtitle_name">a.k.a. <a href="https://github.com/lewardo">lewardo</a></span>
                 <span class="overlay__subtitle_intro">ai, embedded, and web</span>
             </div>
-            <div class="overlay__info overlay__info--philosophy">
-                <span class="overlay__info_title">
-                    &mdash;&nbsp;philosophy
-                </span>
-                <p class="overlay__info_content">
-                    wiwiwiiw
-                </p>
-            </div>
-            <div class="overlay__info overlay__info--about">
-                <span class="overlay__info_title">
-                    &mdash;&nbsp;about
-                </span>
-                <p class="overlay__info_content">
-                    wiwiwiiw
-                </p>
-            </div>
-            <div class="overlay__enter">
+            <div id="overlay_enter" class="overlay__enter">
                 <span class="overlay__button">enter</span>
             </div>
         </div>

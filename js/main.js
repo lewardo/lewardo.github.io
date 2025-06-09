@@ -23,6 +23,21 @@ function interceptNavigation() {
     });
 }
 
+function manageOverlay() {
+    const overlay = document.getElementById('overlay');
+    const enter = document.getElementById('overlay_enter');
+    const logo = document.getElementById('overlay_logo');
+
+    enter.addEventListener('click', () => {
+        overlay.classList.add('overlay--hidden');
+    });
+
+    logo.addEventListener('click', () => {
+        overlay.classList.toggle('overlay--hidden');
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     interceptNavigation();
+    manageOverlay();
 });
