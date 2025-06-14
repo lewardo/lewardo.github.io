@@ -1,0 +1,8 @@
+:root {
+    --animatable-duration: 0.2s;
+    --animatable-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.transition__all {
+  transition: all var(--animatable-duration) var(--animatable-easing);
+}

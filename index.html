@@ -12,6 +12,8 @@
     
     <title>Portfolio &mdash; Edouard Levasseur</title>
 
+    <link rel="stylesheet" href="css/animate.css">
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/colours.css">
 
@@ -35,23 +37,23 @@
     </script>
 
     <script defer src="js/main.js"></script>
-    <!-- <script defer src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.min.js"></script> -->
 </head>
 <body>
     <section class="content">
         <main id="content"></main>
     </section>
 
-    <section id="overlay" class="overlay">
+    <section id="overlay" class="overlay transition__all">
         <div class="overlay__container">
+            <img class="overlay__background" src="assets/grunge.png">
             <div class="overlay__bars">
                 <div class="overlay__bar"></div>
                 <div class="overlay__bar"></div>
                 <div class="overlay__bar"></div>
                 <div class="overlay__bar"></div>
             </div>
-            <div class="overlay__intro">
-                <div class="overlay__info">
+            <div class="overlay__intro transition__all ">
+                <div class="overlay__info transition__all">
                     <span class="overlay__info_title">
                         philosophy
                     </span>
@@ -59,7 +61,7 @@
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perspiciatis nisi, provident omnis quasi vero eveniet ipsa minus molestiae, repellendus temporibus nostrum pariatur libero neque ad minima rerum quaerat amet.
                     </p>
                 </div>
-                <div class="overlay__info">
+                <div class="overlay__info transition__all">
                     <span class="overlay__info_title">
                         about
                     </span>
@@ -68,10 +70,10 @@
                     </p>
                 </div>
             </div>
-            <div id="overlay_logo" class="overlay__logo">
-                &exist;!
+            <div id="overlay_logo" class="overlay__logo transition__all">
+                &exist;&excl;
             </div>
-            <div class="overlay__header">
+            <div class="overlay__header transition__all">
                 <span class="overlay__title">Edouard Levasseur</span>
                 <span class="overlay__subtitle_name">a.k.a. <a href="https://github.com/lewardo">lewardo</a></span>
                 <span class="overlay__subtitle_intro">ai, embedded, and web</span>
@@ -88,9 +90,11 @@
 
     <section id="menu" class="menu">
         <div id="tag" class="menu__tag">
-            <a href="https://en.wikipedia.org/wiki/Uniqueness_quantification" class="menu__tag_container">
-                &exist;!&epsilon;.&iota;
-            </a>
+            <div class="menu__tag_container">
+                <a href="https://en.wikipedia.org/wiki/Uniqueness_quantification" >
+                    &exist;&excl;&epsilon;&period;&iota;
+                </a>
+            </div>
         </div>
         <div id="naviagtion" class="menu__navigation">
             <div class="menu__navigation_container">

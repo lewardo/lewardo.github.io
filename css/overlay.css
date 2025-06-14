@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     user-select: none;
-    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    background: var(--background-colour);
 }
 
 .overlay--hidden {
@@ -23,12 +23,29 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--background-colour);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.overlay__container--entered {
+    height: 50vh;
+}
+
+.overlay__background {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.dark-mode .overlay__background {
+    filter: invert(100%);
+    opacity: 0.5;
 }
 
 .overlay__bars {
@@ -93,7 +110,6 @@
     font-weight: bolder;
     text-align: center;
     cursor: pointer;
-    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .overlay__logo::before {
@@ -125,18 +141,34 @@
     align-items: flex-start;
     justify-content: space-evenly;
     width: 100%;
+    padding: 2em 0;
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
+}
+
+.overlay__intro--entered {
+    height: 0;
+    padding: 0;
 }
 
 .overlay__info {
-    width: 50%;
-    padding: 2em;
+    width: 1fr;
     display: flex;
     flex-direction: column;
+    box-sizing: content-box;
     align-items: flex-end;
     justify-content: flex-start;
+}
+
+.overlay__info:last-of-type {
+    padding-right: 2em;
+}
+
+.overlay__info--hidden {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .overlay__info_title {
@@ -158,7 +190,8 @@
 }
 
 .overlay__info_title:hover::before {
-    width: calc(100% + 1.5em);
+    width: 100%;
+    left: 0;
 }
 
 .overlay__info_content {
@@ -178,8 +211,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-between;;
+    justify-content: space-between;
     transform: translateX(-50%);
+}
+
+.overlay__header--entered {
+    transform: translateX(50%);
 }
 
 .overlay__title {
