@@ -92,7 +92,7 @@
 
 .landing--landed .landing__card_container {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateY(-100%);
 }
 
 .landing__card {
@@ -145,16 +145,18 @@
     align-items: flex-end;
     justify-content: space-between;
     position: absolute;
+    text-wrap: nowrap;
     top: 50%;
     left: 50%;
-    margin: 4rem 0;
-    min-width: 50%;
+    padding: 1rem;
     transform: translate(-100%, -50%);
+    transform-origin: top left;
 }
 
 .landing--landed .landing__intro {
     top: 0;
-    transform: translate(-100%, 0);
+    left: 100%;
+    transform: rotate(90deg) translate(0, 0);
 }
 
 .landing__intro_title {
@@ -173,6 +175,10 @@
     margin: 0;
 }
 
+.landing--landed .landing__intro_subtitle {
+    opacity: 0;
+}
+
 .landing__intro_subtitle a {
     text-decoration: underline;
     color: var(--subtext-colour);
@@ -182,8 +188,13 @@
 .landing__intro_summary {
     font-size: 0.8rem;
     text-align: left;
+    font-weight: normal;
     color: var(--subtext-colour-light);
     margin: 0;
+}
+
+.landing--landed .landing__intro_summary {
+    opacity: 0;
 }
 
 .landing__enter::after {
@@ -191,7 +202,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     padding: 1rem 2rem;
     margin: 2rem 0;
     background-color: var(--background-colour-dark);
@@ -202,4 +213,10 @@
 
 .landing__enter:hover::after {
     background-color: var(--primary-colour);
+}
+
+.landing--landed .landing__enter::after {
+    opacity: 0;
+    margin: 0;
+    transform: translate(-50%, 100%);
 }
