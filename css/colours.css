@@ -48,8 +48,3 @@ body.dark-mode  {
     --button-colour: var(--colour-dark-grey);
     --bar-colour: var(--colour-blue);
 }
-
-body {
-    color: var(--text-colour);
-    background-color: var(--background-colour);
-}

@@ -12,15 +12,18 @@
     
     <title>Portfolio &mdash; Edouard Levasseur</title>
 
+    <link rel="stylesheet" href="css/global.css">
+
+    <link rel="stylesheet" href="css/colours.css">
     <link rel="stylesheet" href="css/animate.css">
 
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/colours.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/header.css">
 
-    <link rel="stylesheet" href="css/overlay.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/content.css">
+    <!-- <link rel="stylesheet" href="css/menu.css"> -->
+    <!-- <link rel="stylesheet" href="css/content.css"> -->
 
+    <script defer src="js/main.js"></script>
     <script type="text/javascript">
         if (window.location.search[1] === '/') href = window.location.search.slice(1);
         else href = 'default';
@@ -35,59 +38,56 @@
                 if (href !== 'default') window.history.replaceState({ path: href }, '', href);
             })
     </script>
-
-    <script defer src="js/main.js"></script>
 </head>
 <body>
-    <section class="content">
-        <main id="content"></main>
+    <section class="header header__container">
+        <h1 id="header_logo" class="header__logo transition__all transition__all--before transition__all--after"></h1>
+        <div id="colour_mode" class="header__colour_mode transition__all"></div>
     </section>
 
-    <section id="overlay" class="overlay transition__all">
-        <div class="overlay__container">
-            <img class="overlay__background" src="assets/grunge.png">
-            <div class="overlay__bars">
-                <div class="overlay__bar"></div>
-                <div class="overlay__bar"></div>
-                <div class="overlay__bar"></div>
-                <div class="overlay__bar"></div>
+    <section id="landing" class="landing landing__container">
+        <img class="landing__background" src="assets/landing_background.png">
+        
+        <div class="landing__bar_container">
+            <div class="landing__bar"></div>
+            <div class="landing__bar"></div>
+            <div class="landing__bar"></div>
+            <div class="landing__bar"></div>
+        </div>
+        
+        <div class="landing__card_container">
+            <div class="landing__card">
+                <h2 class="landing__card_title transition__all--before">
+                    philosophy
+                </h2>
+
+                <p class="landing__card_content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perspiciatis nisi, provident omnis quasi vero eveniet ipsa minus molestiae, repellendus temporibus nostrum pariatur libero neque ad minima rerum quaerat amet.
+                </p>
             </div>
-            <div class="overlay__intro transition__all ">
-                <div class="overlay__info transition__all">
-                    <span class="overlay__info_title">
-                        philosophy
-                    </span>
-                    <p class="overlay__info_content">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore perspiciatis nisi, provident omnis quasi vero eveniet ipsa minus molestiae, repellendus temporibus nostrum pariatur libero neque ad minima rerum quaerat amet.
-                    </p>
-                </div>
-                <div class="overlay__info transition__all">
-                    <span class="overlay__info_title">
-                        about
-                    </span>
-                    <p class="overlay__info_content">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illum aliquam eos velit nobis a quia eius, aut rem, eligendi veniam! Laborum dignissimos maiores et, officia distinctio quam perferendis culpa.
-                    </p>
-                </div>
-            </div>
-            <div id="overlay_logo" class="overlay__logo transition__all">
-                &exist;&excl;
-            </div>
-            <div class="overlay__header transition__all">
-                <span class="overlay__title">Edouard Levasseur</span>
-                <span class="overlay__subtitle_name">a.k.a. <a href="https://github.com/lewardo">lewardo</a></span>
-                <span class="overlay__subtitle_intro">ai, embedded, and web</span>
-            </div>
-            <div id="overlay_enter" class="overlay__enter">
-                <span class="overlay__button">enter</span>
-            </div>
-            <div id="colour_mode" class="overlay__colour_mode">
-                <span class="overlay__colour_mode--light">&#9728;</span>
-                <span class="overlay__colour_mode--dark">&#9789;</span>
+
+            <div class="landing__card">
+                <h2 class="landing__card_title transition__all--before">
+                    about
+                </h2>
+
+                <p class="landing__card_content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem illum aliquam eos velit nobis a quia eius, aut rem, eligendi veniam! Laborum dignissimos maiores et, officia distinctio quam perferendis culpa.
+                </p>
             </div>
         </div>
+        
+        <div class="landing__intro transition__all--before">
+            <h1 class="landing__intro_title">Edouard Levasseur</h1>
+            <h2 class="landing__intro_subtitle">a.k.a. <a href="https://github.com/lewardo">lewardo</a></h2>
+            <h3 class="landing__intro_summary">ai, embedded, and web</h3>
+        </div>
+
+        <div id="landing_enter" class="landing__enter transition__all--after"></div>
     </section>
 
+
+<!-- 
     <section id="menu" class="menu">
         <div id="tag" class="menu__tag">
             <div class="menu__tag_container">
@@ -135,9 +135,13 @@
         </div>
         <div class="menu__hero">
             <div class="menu__hero_container">
-                <!-- <img src="assets/favicon.png" alt="wow"> -->
+                <img src="assets/favicon.png" alt="wow">
             </div>
         </div>
     </section>
+
+    <section class="content">
+        <main id="content"></main>
+    </section> -->
 </body>
 </html>

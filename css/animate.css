@@ -6,3 +6,11 @@
 .transition__all {
   transition: all var(--animatable-duration) var(--animatable-easing);
 }
+
+.transition__all--before::before {
+  transition: all var(--animatable-duration) var(--animatable-easing);
+}
+
+.transition__all--after::after {
+  transition: all var(--animatable-duration) var(--animatable-easing);
+}

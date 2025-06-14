@@ -9,3 +9,8 @@
     box-sizing: border-box;
     font-family: "Times New Roman", serif;
 }
+
+body {
+    color: var(--text-colour);
+    background-color: var(--background-colour);
+}
