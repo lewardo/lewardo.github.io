@@ -1,16 +1,8 @@
 :root {
-    --animatable-duration: 0.2s;
+    --animatable-duration: 0.5s;
     --animatable-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.transition__all {
-  transition: all var(--animatable-duration) var(--animatable-easing);
-}
-
-.transition__all--before::before {
-  transition: all var(--animatable-duration) var(--animatable-easing);
-}
-
-.transition__all--after::after {
+.transition__all, .transition__all::before, .transition__all::after {
   transition: all var(--animatable-duration) var(--animatable-easing);
 }

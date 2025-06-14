@@ -1,4 +1,4 @@
-function manageMenu() {
+export default function() {
     const menu = document.getElementById('menu');
     const menuToggle = document.getElementById('overlay_logo');
 

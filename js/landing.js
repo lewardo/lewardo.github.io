@@ -1,8 +1,8 @@
-function manageOverlay() {
-    const overlay = document.getElementById('overlay');
-    const enter = document.getElementById('overlay_enter');
+export default function() {
+    const overlay = document.getElementById('landing');
+    const enter = document.getElementById('landing_enter');
 
     enter.addEventListener('click', () => {
-        overlay.classList.add('overlay--hidden');
+        overlay.classList.add('landing--landed');
     });
 }

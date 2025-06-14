@@ -1,12 +1,11 @@
-import { navigation } from './navigation.js';
-import { overlay } from './overlay.js';
-import { darkMode } from './darkMode.js';
-import { menu } from './menu.js';
-import { landing } from './landing.js';
+import navigation from './navigation.js';
+import landing from './landing.js';
+import colour from './colour.js';
+import menu from './menu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    interceptNavigation();
-    manageOverlay();
-    manageColourMode();
-    manageMenu();
+    navigation();
+    landing();
+    colour();
+    menu();
 });

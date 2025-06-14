@@ -1,4 +1,4 @@
-function animate(querySelector, className, options = {}) {
+export default function animate(querySelector, className, options = {}) {
     const {
         delay = 0,
         stagger = 0,

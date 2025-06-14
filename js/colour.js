@@ -1,4 +1,4 @@
-export default function initDarkMode() {
+export default function() {
     const toggle = document.getElementById('colour_mode');
 
     const savedMode = localStorage.getItem('colourMode') || 'light';

@@ -90,8 +90,12 @@
     overflow: hidden;
 }
 
+.landing--landed .landing__card_container {
+    opacity: 0;
+    transform: translateX(50%);
+}
+
 .landing__card {
-    width: 1fr;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -136,7 +140,6 @@
 }
 
 .landing__intro {
-    /* height: 3rem; */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -144,7 +147,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    margin: 4rem 0;
+    min-width: 50%;
     transform: translate(-100%, -50%);
+}
+
+.landing--landed .landing__intro {
+    top: 0;
+    transform: translate(-100%, 0);
 }
 
 .landing__intro_title {
